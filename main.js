@@ -168,8 +168,9 @@ document.getElementById('btnReadNumber').onclick = function () {
     var soHangTram = Math.floor(numberValue / 100);
     var soHangChuc = Math.floor((numberValue % 100) / 10);
     var soDonVi = Math.floor((numberValue % 100) % 10);
+    var resultSpellNumber = "";
+    resultSpellNumber = checkValueNumber(numberValue, soHangTram, soHangChuc, soDonVi, resultSpellNumber);
 
-    var resultSpellNumber = `${spellNumber(soHangTram)} trăm ${spellNumber(soHangChuc)} mươi ${spellNumber(soDonVi)}`;
     document.getElementById('showResultSpellNumber').innerHTML = resultSpellNumber;
 }
 // Hàm đọc số
@@ -193,10 +194,28 @@ var spellNumber = function (number) {
         case 8:
             return resultSpell = "tám";
         case 9:
-            return resultSpell = "chín"
+            return resultSpell = "chín";
         default:
             return resultSpell = "";
     }
+}
+
+
+var checkValueNumber = function (numberValue, soHangTram, soHangChuc, soDonVi, resultSpellNumber) {
+    if (numberValue > 0 && numberValue <= 9) {
+        alert("Hàng trăm không xác định được");
+        alert("Hàng chục không xác định được");
+        resultSpellNumber = `${spellNumber(soDonVi)}`;
+    } else if ((numberValue >= 10 && numberValue <= 99)) {
+        alert("Hàng trăm không xác định được");
+        resultSpellNumber = `${spellNumber(soHangChuc)} mươi ${spellNumber(soDonVi)}`;
+    } else if ((numberValue >= 100 && numberValue <= 999)) {
+        resultSpellNumber = `${spellNumber(soHangTram)} trăm ${spellNumber(soHangChuc)} mươi ${spellNumber(soDonVi)}`;
+    } else {
+        resultSpellNumber = `Kiểm tra lại giá trị nhập`;
+    }
+    return resultSpellNumber;
+
 }
 
 // --------------------------------------------------------
