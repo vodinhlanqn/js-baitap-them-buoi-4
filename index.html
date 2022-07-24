@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>BÀI TẬP JAVASCRIP THÊM- BUỔI 4</title>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+
+		<!-- Bootstrap CSS v5.2.0-beta1 -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+			integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+			crossorigin="anonymous"
+		/>
+	</head>
+	<body>
+		<div class="container">
+			<h1 class="text-center mt-4 bg-info rounded py-3">
+				JAVASCRIPT - BÀI TẬP THÊM - BUỔI 4
+			</h1>
+
+			<!-- Bài tập số 1: TÌM NGÀY, THÁNG, NĂM CỦA NGÀY TIẾP THEO, VÀ NGÀY TRƯỚC ĐÓ -->
+
+			<div class="row">
+				<div class="col-md-10 m-auto">
+					<div class="card">
+						<div class="card-header bg-dark text-light text-center fs-5">
+							Bài tập 1: TÍNH NGÀY THÁNG NĂM
+						</div>
+						<div class="card-body">
+							<div class="row justify-content-center">
+								<div class="col-md-4">
+									<div class="form-group mb-3">
+										<label for="inputDay" class="form-label">Nhập Ngày</label>
+										<input
+											type="number"
+											name=""
+											id="inputDay"
+											class="form-control"
+											placeholder="Nhập ngày"
+										/>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group mb-3">
+										<label for="inputMonth" class="form-label"
+											>Nhập Tháng</label
+										>
+										<input
+											type="number"
+											name=""
+											id="inputMonth"
+											class="form-control"
+											placeholder="Nhập tháng"
+										/>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group mb-3">
+										<label for="inputYear" class="form-label">Nhập Năm</label>
+										<input
+											type="number"
+											name=""
+											id="inputYear"
+											class="form-control"
+											placeholder="Nhập năm"
+										/>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-4">
+										<button
+											id="btnYesterday"
+											type="button"
+											class="btn btn-success w-50 fs-5"
+										>
+											Hôm qua
+										</button>
+									</div>
+									<div class="col-md-4">
+										<button
+											id="btnTommorow"
+											type="button"
+											class="btn btn-success w-50 fs-5"
+										>
+											Ngày mai
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-footer text-muted">
+							<p id="showResultDayMonthYear" class="fs-6"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Bài tập số 2: TÍNH SỐ NGÀY CỦA THÁNG NĂM -->
+
+			<div class="row my-4">
+				<div class="col-md-10 m-auto">
+					<div class="card">
+						<div class="card-header bg-dark text-light text-center fs-5">
+							Bài tập 2: TÍNH SỐ NGÀY CỦA THÁNG NĂM
+						</div>
+						<div class="card-body">
+							<div class="row d-flex align-content-center">
+								<div class="col-md-4">
+									<div class="form-group mb-3">
+										<input
+											type="number"
+											name=""
+											id="month"
+											class="form-control"
+											placeholder="Nhập tháng"
+										/>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group mb-3">
+										<input
+											type="number"
+											name=""
+											id="year"
+											class="form-control"
+											placeholder="Nhập năm"
+										/>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<button
+										id="btnCalcDays"
+										type="button"
+										class="btn btn-warning w-75"
+									>
+										Tính ngày
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="card-footer text-muted">
+							<p id="showResultDayOnMonth" class="fs-6"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Bài tập số 3: ĐỌC SỐ -->
+
+			<div class="row my-4">
+				<div class="col-md-10 m-auto">
+					<div class="card">
+						<div class="card-header bg-dark text-light text-center fs-5">
+							Bài tập 3: ĐỌC SỐ
+						</div>
+						<div class="card-body">
+							<div class="row d-flex align-content-center">
+								<div class="col-md-4">
+									<div class="form-group mb-3">
+										<input
+											type="number"
+											name=""
+											id="number"
+											class="form-control"
+											placeholder="Nhập số 3 chữ số"
+											autocomplete="off"
+										/>
+									</div>
+								</div>
+
+								<div class="col-md-4">
+									<button
+										id="btnReadNumber"
+										type="button"
+										class="btn btn-info w-75"
+									>
+										Đọc số
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="card-footer text-muted">
+							<p id="showResultSpellNumber" class="fs-6"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Bài tập số 4: TÌM SINH VIÊN XA TRƯỜNG NHẤT -->
+
+			<div class="row my-4">
+				<div class="col-md-10 m-auto">
+					<div class="card">
+						<div class="card-header bg-dark text-light text-center fs-5">
+							Bài tập 4: TÌM SINH VIÊN XA TRƯỜNG NHẤT
+						</div>
+						<div class="card-body">
+							<div class="row d-flex align-content-center">
+								<label for="nameA" class="form-label text-mute"
+									>Sinh Viên 1</label
+								>
+								<div class="col-md-4">
+									<div class="form-group mb-3">
+										<input
+											type="text"
+											name=""
+											id="nameA"
+											class="form-control"
+											placeholder="Nhập tên Sinh viên 1 "
+											autocomplete="off"
+										/>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group mb-3">
+										<input
+											type="number"
+											name=""
+											id="xToaDoA"
+											class="form-control"
+											placeholder="Nhập tọa độ x"
+											autocomplete="off"
+										/>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group mb-3">
+										<input
+											type="number"
+											name=""
+											id="yToaDoA"
+											class="form-control"
+											placeholder="Nhập tọa độ y"
+											autocomplete="off"
+										/>
+									</div>
+								</div>
+							</div>
+							<div class="row d-flex align-content-center">
+								<label for="nameB" class="form-label text-mute"
+									>Sinh Viên 2</label
+								>
+								<div class="col-md-4">
+									<div class="form-group mb-3">
+										<input
+											type="text"
+											name=""
+											id="nameB"
+											class="form-control"
+											placeholder="Nhập tên Sinh viên 2 "
+											autocomplete="off"
+										/>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group mb-3">
+										<input
+											type="number"
+											name=""
+											id="xToaDoB"
+											class="form-control"
+											placeholder="Nhập tọa độ x"
+											autocomplete="off"
+										/>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group mb-3">
+										<input
+											type="number"
+											name=""
+											id="yToaDoB"
+											class="form-control"
+											placeholder="Nhập tọa độ y"
+											autocomplete="off"
+										/>
+									</div>
+								</div>
+							</div>
+							<div class="row d-flex align-content-center">
+								<label for="nameC" class="form-label text-mute"
+									>Sinh Viên 3</label
+								>
+								<div class="col-md-4">
+									<div class="form-group mb-3">
+										<input
+											type="text"
+											name=""
+											id="nameC"
+											class="form-control"
+											placeholder="Nhập tên Sinh viên 3 "
+											autocomplete="off"
+										/>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group mb-3">
+										<input
+											type="number"
+											name=""
+											id="xToaDoC"
+											class="form-control"
+											placeholder="Nhập tọa độ x"
+											autocomplete="off"
+										/>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group mb-3">
+										<input
+											type="number"
+											name=""
+											id="yToaDoC"
+											class="form-control"
+											placeholder="Nhập tọa độ y"
+											autocomplete="off"
+										/>
+									</div>
+								</div>
+							</div>
+							<div class="row d-flex align-content-center">
+								<label for="" class="form-label text-mute">Trường học</label>
+								<div class="col-md-4">
+									<div class="form-group mb-3">
+										<input
+											type="number"
+											name=""
+											id="xToaDoTruong"
+											class="form-control"
+											placeholder="Nhập tọa độ x"
+											autocomplete="off"
+										/>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group mb-3">
+										<input
+											type="number"
+											name=""
+											id="yToaDoTruong"
+											class="form-control"
+											placeholder="Nhập tọa độ y"
+											autocomplete="off"
+										/>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-4">
+									<button
+										id="btnCalcDistance"
+										type="button"
+										class="btn btn-danger w-75"
+									>
+										Tính khoảng cách
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="card-footer text-muted">
+							<p id="showResultDistance" class="fs-6"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Bootstrap JavaScript Libraries -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+			integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+			crossorigin="anonymous"
+		></script>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+			integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+			crossorigin="anonymous"
+		></script>
+
+		<script src="./main.js"></script>
+	</body>
+</html>
